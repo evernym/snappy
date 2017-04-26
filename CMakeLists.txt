@@ -148,5 +148,6 @@ set(TESTS
 
 add_executable(snappy_test${ARTIFACT_SUFFIX} ${TESTS})
 set_target_properties(snappy_test${ARTIFACT_SUFFIX}
-      PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD_RELEASE 1)
+      PROPERTIES EXCLUDE_FROM_ALL 1
+                 EXCLUDE_FROM_DEFAULT_BUILD 1)
 target_link_libraries(snappy_test${ARTIFACT_SUFFIX} snappylib${ARTIFACT_SUFFIX})
